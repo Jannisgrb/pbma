@@ -47,7 +47,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := OOP_A3 (ggts)
+BUILD_ARTIFACT_NAME := OOP_A3
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -58,19 +58,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: OOP_A3\ (ggts)
+main-build: OOP_A3
 
 # Tool invocations
-OOP_A3\ (ggts): $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+OOP_A3: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "OOP_A3 (ggts)" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "OOP_A3" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) OOP_A3\\ (ggts)
+	-$(RM) OOP_A3
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
