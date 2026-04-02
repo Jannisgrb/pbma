@@ -13,7 +13,7 @@ void start_letters_out(vector<int> counter);
 
 int main(int argc, const char* argv[]){
 	args_t args(argc, argv);
-	string fname = args.pos(0, "woerter.dat");
+	string fname = args.pos(0, "atwi80d.txt");
 
 	vector<string> woerter = read_words(fname);
 
