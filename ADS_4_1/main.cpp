@@ -25,7 +25,7 @@ int main(){
 //		cout << "Fehler an Position: " << first_error << endl;
 //	}
 
-	check_sort(SelectionSort(), true);
+	check_sort(MergeSort, true, true);
 }
 
 
@@ -71,23 +71,23 @@ void mergen(vector<int>& a, vector<int>& b, size_t li, size_t end_li, size_t re,
 	size_t start = li, end = end_re;
 	size_t i = li;
 	while (li <= end_li && re <= end_re) {
-		if (a[li] <= a[re]) { // stabiles Sortieren
-			swap(b, i++, a, li++); // b[i++] = a[li++];
+		if (a[li] <= a[re]) {
+			swap(b, i++, a, li++);
 		} else {
-			swap(b, i++, a, re++); // b[i++] = a[re++];
+			swap(b, i++, a, re++);
 		}
 	}
 	while (li <= end_li) {
-		swap(b, i++, a, li++); // b[i++] = a[li++];
+		swap(b, i++, a, li++);
 	}
 	while (re <= end_re) {
-		swap(b, i++, a, re++); // b[i++] = a[re++];
+		swap(b, i++, a, re++);
 	}
-	mycopy(a, b, start, end + 1); // zurück in a kopieren
+	mycopy(a, b, start, end + 1);
 }
 
 void merge_sort(vector<int>& a, vector<int>& b, size_t li, size_t re) {
-	if (li == re) { // Einelementig ist sortiert
+	if (li == re) {
 		return;
 	}
 	size_t mi = li + (re - li) / 2;
