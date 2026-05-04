@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 void klappt() {
 	IntVector vec = IntVector(17);
 	for (size_t i = 0; i < vec.size(); i++) {
-		vec.at(i) = (int) i;
+		vec[i] = (int) i;
 	}
 
 	cout << "Das Feld ist " << vec.size() << " lang" << endl;
@@ -27,7 +27,7 @@ void klappt() {
 
 	for (size_t i = 0; i < vec.size(); i++) {
 		if (i % 2 == 0) {
-			vec.at(i) += 42;
+			vec[i] += 42;
 		}
 	}
 
@@ -38,13 +38,13 @@ void klappt() {
 void crash() {
 	cout << "Crash-Test:" << endl;
 	IntVector vec = IntVector(17);
-	cout << vec.at(42) << endl;
+	cout << vec[42] << endl;
 }
 
 void copyassign() {
 	IntVector v1(17);
 	for (size_t i = 0; i < v1.size(); ++i) {
-		v1.at(i) = (int) i;
+		v1[i] = (int) i;
 	}
 	cout << "v1: " << endl;
 	v1.out();

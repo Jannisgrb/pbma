@@ -14,7 +14,7 @@ public:
 	IntVector& operator=(const IntVector&);
 	IntVector(const IntVector&);
 	size_t size() const;
-	int& at(size_t idx);
+	int& operator[](size_t idx);
 	void out() const;
 };
 

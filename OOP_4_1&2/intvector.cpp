@@ -15,7 +15,7 @@ size_t IntVector::size() const {
 	return length;
 }
 
-int& IntVector::at(size_t idx) {
+int& IntVector::operator[](size_t idx) {
 	if (idx >= 0 && idx < length) {
 		return Array[idx];
 	} else {
@@ -37,7 +37,7 @@ IntVector::IntVector(const IntVector &other) {
 	}
 }
 
-IntVector& IntVector::operator=(const IntVector &other) {
+IntVector &IntVector::operator=(const IntVector &other) {
 	if (this == &other) {
 		return *this;
 	}
