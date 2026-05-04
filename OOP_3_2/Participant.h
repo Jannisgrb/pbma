@@ -7,9 +7,11 @@ class Participant {
 private:
 	string name;
 	Time Zeit;
+	static int valid_Participants;
 
 public:
 	Participant(string name = "", Time Zeit = Time(0,0,0));
+	~Participant();
 	void give_name(string n);
 	void give_time(Time t);
 	string return_name();

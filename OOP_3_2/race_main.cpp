@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(int argc, const char *argv[]) {
-	args_t args(argc, argv);
+	//int n = argc-1;
 	vector<string> Teilnehmer_Namen(argc-1);
 	for (int i = 0; i < argc-1; i++) {
 		Teilnehmer_Namen[i] = argv[i + 1];
@@ -16,6 +16,9 @@ int main(int argc, const char *argv[]) {
 	vector<int> Times = create_randints(argc-1, 0, 1000);
 
 	for (int i = 0; i < argc-1; i++) {
+		//Participant a {Teilnehmer_Namen[i]};
+		// a.give_time();
+		//teilnehmer.push_back(a);
 		teilnehmer[i].give_name(Teilnehmer_Namen[i]);
 		teilnehmer[i].give_time(Time(0, 0, Times[i]));
 	}

@@ -1,0 +1,10 @@
+/.metadata/
+**/.settings/
+**/.project
+**/.classpath
+**/bin/
+**/build/
+**/Debug
+**/.cproject
+.autotools
+.DS_Store

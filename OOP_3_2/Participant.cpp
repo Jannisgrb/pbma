@@ -2,9 +2,16 @@
 #include "Participant.h"
 using namespace std;
 
+int Participant::valid_Participants = 0;
+
 Participant::Participant(string name, Time Zeit){
 	this->name = name;
 	this->Zeit = Zeit;
+	valid_Participants += 1;
+}
+
+Participant::~Participant(){
+	valid_Participants -=1;
 }
 
 void Participant::give_name(string n){
